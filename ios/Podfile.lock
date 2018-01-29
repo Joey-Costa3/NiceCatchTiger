@@ -1,0 +1,33 @@
+PODS:
+  - AEXML-CU (4.2.1)
+  - Alamofire (4.5.0)
+  - ReactiveSwift (1.1.3):
+    - Result (~> 3.2)
+  - Result (3.2.3)
+  - SwiftECP (4.0.2):
+    - AEXML-CU (~> 4.2.0)
+    - Alamofire (~> 4.0)
+    - ReactiveSwift (~> 1.0)
+    - XCGLogger (~> 4.0)
+  - SwiftyJSON (3.1.4)
+  - XCGLogger (4.0.0):
+    - XCGLogger/Core (= 4.0.0)
+  - XCGLogger/Core (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftECP (= 4.0.2)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  AEXML-CU: cf59da43ab1fc92c05a40b89380e464dc001ec76
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  ReactiveSwift: f54ba12c2e799003432930fa55495315ae44f32b
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  SwiftECP: 7227a1476622d05ca99503aa85f8a9f2372d17da
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
+
+PODFILE CHECKSUM: 42002a2a07c94ff1f3880a206db892dc6908c1f3
+
+COCOAPODS: 1.2.1

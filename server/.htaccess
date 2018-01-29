@@ -1,0 +1,16 @@
+AuthType shibboleth
+ShibRequireSession On
+require valid-user
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule api/v1/(.*)$ /api/v1/api.php?request=$1 [QSA,NC,L]
+</IfModule>
+
+Options -Indexes
+
+
+php_value upload_max_filesize 50M
+php_value post_max_size 50M

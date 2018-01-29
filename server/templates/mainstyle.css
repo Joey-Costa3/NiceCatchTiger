@@ -1,0 +1,214 @@
+html {
+	position: relative;
+}
+nav .container-fluid {
+	background-color: #F66733;
+}
+
+nav, .navbar-default {
+	background-color: #F66733;
+	background-image: none;	
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: black;
+}
+
+.navbar-default .navbar-brand {
+	color: black;
+}
+
+#paw {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-image: none;
+	background-color: white;
+	color: #522D80;	
+}
+
+#navbar {
+	background-color: #F66733;
+	width: 100%;
+}
+
+
+.containerC {
+    position:relative;
+    width:95%;
+    margin-left : 50px;
+    margin-right : 50px;
+    }
+body {
+	margin-bottom: 80px;
+	padding-top: 80px; /* for fixed nav */
+	 width:100%;
+    height:100%;
+    margin:0;
+}
+
+footer {
+	height: 30px;
+	position: relative;
+	bottom: 0px;
+	background-color: #F66733;
+	color: black;
+	text-align: center;
+	width: 100%;
+	padding-top: 5px;
+	float: center;
+}
+h1 {
+  margin: 0;
+    display: inline-block;
+}
+button {
+  height: 32px;
+  display: block;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color:black;
+}
+button.empty {
+background:none!important;
+     border:none; 
+     padding:0!important;
+    text-align: center;
+    /*optional*/
+    font-family:arial,sans-serif; /*input has OS specific font-family*/
+     color:#069;
+     cursor:pointer;
+}
+
+table.padding {
+    padding-bottom: 40px;
+
+}
+tr.hover {
+background-color: darkgray;
+}
+td.userSubmitted {
+    text-decoration: underline;
+}
+.center {
+    text-align: center;
+    color: darkgray;
+}
+.right {
+    text-align: right;
+    border: 3px solid red;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-20%; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-20%; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #522D80;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #522D80;
+    color: white;
+}
+
+#viewport {
+    background: #bbb;
+    width: 350px;
+    padding: 5px;
+    position: relative;
+}
+#viewport img {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;  /* = image height div 2 */
+}
+#viewport span {
+    margin-left: 68px;  /* = image width + 8 */
+    display: block;    
+}
+.Table
+    {
+        display: table;
+    }
+
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: left;
+    }
+    .RowInfo
+    {
+        display: table-row;
+        text-align: left;
+
+    }
+    .Cell
+    {
+        display: table-cell;
+       
+        padding-right: 5px;
+    }
+    .RowInfo:nth-child(even){background-color: #f2f2f2}

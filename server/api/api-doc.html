@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ThrowNote API</title>
+	<style>
+		table {
+		    border-collapse: collapse;
+		}
+
+		table, th, td {
+		    border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+<h1>ThrowNote V1 API</h1>
+<hr />
+
+<h2>Table Of Contents:</h2>
+<ol>
+	<li><a href="#buildings">Buildings</a></li>
+	<li><a href="#departments">Departments</a></li>
+	<li><a href="#involvements">Involvements</a></li>
+	<li><a href="#personKinds">Person Kinds</a></li>
+	<li><a href="#reportKinds">Report Kinds</a></li>
+	<li><a href="#reports">Reports</a></li>
+	<li><a href="#report">Report (single)</a></li>
+</ol>
+
+<hr />
+
+<h2><a name="buildings">Buildings Endpoint</a></h2>
+
+	<table>
+		<tr><th colspan="2">Get Default Buildings</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/buildings</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>GET</td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": [
+        {
+              "id": "1",
+              "buildingName": "Brackett Hall"
+        }, 
+        {
+              "id": "2",
+              "buildingName": "BRC"
+        }, 
+    ],
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+<hr />
+
+<h2><a name="departments">Departments Endpoint</a></h2>
+
+	<table>
+		<tr><th colspan="2">Get Default Departments</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/departments</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>GET</td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": [
+        {
+              "id": "1",
+              "departmentName": "Agricultural &amp; Environmental Sciences"
+        },
+        {
+              "id": "2",
+              "departmentName": "etc"
+        }
+
+    ],
+      "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+<hr />
+
+<h2><a name="involvements">Involvements Endpoint</a></h2>
+
+	<table>
+		<tr><th colspan="2">Get Default Involvements</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/involvements</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>GET</td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": [
+        {
+            "id": "1",
+            "involvementKind": "Work Practice/Procedure",
+            "default": "1"
+        },
+    ],
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">New Involvement</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/involvements</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "9",
+        "involvementKind": "new involvement"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">Update Involvement</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/involvements</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "30",
+        "involvementKind": "updated title"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">Look Up Involvement</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/involvements</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "9",
+        "involvementKind": "My involvement"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+<hr />
+
+<h2><a name="personKinds">Person Kinds Endpoint</a></h2>
+
+	<table>
+		<tr><th colspan="2">Get Default Person Kind</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/personKinds</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>GET</td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": [
+        {
+            "id": "1",
+            "personKind": "Faculty",
+            "default": "1"
+        },
+        {
+            "id": "4",
+            "personKind": "Other",
+            "default": "1"
+        }
+    ],
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">New Person Kind</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/personKinds</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "5",
+        "personKind": "my new title"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">Update Person Kind</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/personKinds</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "5",
+        "personKind": "my updated title"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">Look Up Person Kind</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/personKinds</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "5",
+        "personKind": "my updated title"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+<hr />
+
+<h2><a name="reportKinds">Report Kinds Endpoint</a></h2>
+
+	<table>
+		<tr><th colspan="2">Get Default Report Kinds</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/reportKinds</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>GET</td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": [
+        {
+            "id": "1",
+            "reportKind": "Close Call",
+            "default": "1"
+        },
+        {
+            "id": "4",
+            "reportKind": "Other",
+            "default": "1"
+        }
+    ],
+    "message": ""
+}
+
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">New Report Kinds</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/reportKinds</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "5",
+        "reportKind": "my new kind"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">Update Report Kind</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/reportKinds</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "5",
+        "reportKind": "my updated kind"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">Look Up Report Kind</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/reportKinds</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "5",
+        "reportKind": "my updated kind"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+<hr />
+
+<h2><a name="reports">Reports Endpoint</a></h2>
+
+	<table>
+		<tr><th colspan="2">Get Reports</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/reports?filter=&lt;all/new/closed&gt;</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>GET</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td>?filter=all<br />?filter=new<br />?filter=closed</td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+  "data": [
+    {
+      "id": "9",
+      "description": "I almost spilled something",
+      "involvementKindID": "5",
+      "reportKindID": "3",
+      "locationID": "11",
+      "personID": "5",
+      "departmentID": "3",
+      "dateTime": "2016-03-03 09:49:25",
+      "statusID": "1",
+      "actionTaken": "none",
+      "photoPath": null
+    },
+    {
+      "id": "10",
+      "description": "I almost spilled something",
+      "involvementKindID": "5",
+      "reportKindID": "3",
+      "locationID": "11",
+      "personID": "5",
+      "departmentID": "3",
+      "dateTime": "2016-03-29 09:49:25",
+      "statusID": "1",
+      "actionTaken": "none",
+      "photoPath": null
+    }
+  ],
+  "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br /><br />
+
+	<table>
+		<tr><th colspan="2">New Report</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/reports</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "9",
+        "description": "I almost spilled something",
+        "involvementKindID": "5",
+        "reportKindID": "3",
+        "locationID": "11",
+        "personID": "5",
+        "departmentID": "3",
+        "dateTime": "2016-03-03 09:49:25",
+        "statusID": "1",
+        "actionTaken": "none",
+        "photoPath": null
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+<hr />
+
+<h2><a name="report">Report Endpoint</a></h2>
+
+	<table>
+		<tr><th colspan="2">Get Report</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/reports/ID</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>GET</td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "1",
+        "description": "this is a test",
+        "involvementKindID": "2",
+        "reportKindID": "1",
+        "locationID": "1",
+        "personID": "1",
+        "departmentID": "2",
+        "dateTime": "2016-02-09 00:00:01",
+        "statusID": null,
+        "actionTaken": null,
+        "photoPath": "/Users/Jake/git/NiceCatch/web/uploads/1/google.png"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">Get Report Photo</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/reports/ID/photo</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>GET</td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+PHOTO
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<table>
+		<tr><th colspan="2">Add Report Photo</th></tr>
+		<tr>
+			<td>URL</td>
+			<td>http://http://people.cs.clemson.edu/~jacosta/api/v1/reports/ID/photo</td>
+		</tr>
+		<tr>
+			<td>Method</td>
+			<td>POST</td>
+		</tr>
+		<tr>
+			<td>Data Params</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Success Response</td>
+			<td>200 OK</td>
+		</tr>
+		<tr>
+			<td>Error Responses</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Sample Response</td>
+			<td>
+<pre>
+{
+    "data": {
+        "id": "1",
+        "description": "this is a test",
+        "involvementKindID": "2",
+        "reportKindID": "1",
+        "locationID": "1",
+        "personID": "1",
+        "departmentID": "2",
+        "dateTime": "2016-02-09 00:00:01",
+        "statusID": null,
+        "actionTaken": null,
+        "photoPath": "/Users/Jake/git/NiceCatch/web/uploads/1/google.png"
+    },
+    "message": ""
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+</body>
+</html>

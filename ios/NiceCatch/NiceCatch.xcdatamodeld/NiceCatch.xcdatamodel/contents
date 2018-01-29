@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Location" syncable="YES">
+        <attribute name="building" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="department" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roomNum" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Person" syncable="YES">
+        <attribute name="designation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNum" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Report" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="involveKind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="personID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="reportKind" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Report" positionX="-342" positionY="-18" width="128" height="135"/>
+        <element name="Location" positionX="-180" positionY="60" width="128" height="120"/>
+        <element name="Person" positionX="-180" positionY="-78" width="128" height="105"/>
+    </elements>
+</model>
